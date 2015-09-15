@@ -27,6 +27,6 @@ alias rg='rm Gemfile.lock'
 alias tp='sudo cp /etc/hosts_prod /etc/hosts'
 alias td='sudo cp /etc/hosts_dev /etc/hosts'
 alias rt='ruby -I.:lib:test'
-
+alias rs='rails s'
 # # # function rtm(){ ruby -I.:lib:test $1 -n 'test_should_$2' ; } 
 

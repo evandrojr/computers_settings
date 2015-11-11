@@ -1,2 +1,2 @@
 synclient PalmDetect=1
-synclient PalmMinWidth=5
+synclient PalmMinWidth=4

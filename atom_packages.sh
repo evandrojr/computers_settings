@@ -12,4 +12,5 @@ apm install git-plus
 apm install remote-edit
 apm install ruby-test
 apm install execute-as-ruby
+apm install editorconfig
 

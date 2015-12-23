@@ -3,7 +3,7 @@ alias b='git branch'
 alias bi='bundle install'
 alias c="ag '(#DONT_COMMIT)|(binding.pry)' && git commit"
 alias d='git diff'
-alias f='git fetch'
+alias gf='git fetch'
 alias k='git checkout'
 alias kp='git checkout production'
 alias km='git checkout master'
@@ -30,5 +30,6 @@ alias td='sudo cp /etc/hosts_dev /etc/hosts'
 alias rt='ruby -I.:lib:test'
 alias rs='rails s'
 alias at='atom .'
+alias f='fish'
 # # # function rtm(){ ruby -I.:lib:test $1 -n 'test_should_$2' ; } 
 

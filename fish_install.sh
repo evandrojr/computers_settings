@@ -47,5 +47,5 @@ run sudo apt-get install fish
 run chsh -s `which fish`
 run rm ~/.config/fish/config.fish -fv
 run rm ~/.config/fish/functions -rfv
-run ln -sv `pwd`/.config/fish/config.fish ~/.config/fish/config.fish
-run ln -sv `pwd`/.config/fish/functions ~/.config/fish/functions
+run ln -sv `pwd`/fish/.config/fish/config.fish ~/.config/fish/config.fish
+run ln -sv `pwd`/fish/.config/fish/functions ~/.config/fish/functions

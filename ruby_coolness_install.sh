@@ -52,4 +52,15 @@ if [ -f computer_settings_dir ]
 fi
 
 gem_install "jazz_fingers"
-run ln -sv dotfiles/.irbrc ~/.irbrc
+say "Linking .irbrc"
+run rm -fv ~/.irbrc
+run ln -sv `pwd`/ruby/.irbrc ~/.irbrc
+say "Linking .pryrc"
+run rm -fv ~/.pryrc
+run ln -sv `pwd`/ruby/.pryrc ~/.pryrc
+say "Creating user bin dir if not exists"
+run mkdir -pv ~/bin
+run rm -fv ~/bin/remove_breakpoints.rb
+run ln -sv `pwd`/ruby/remove_breakpoints.rb ~/bin
+
+say "Always remember to copy ruby/Gemfile to your config/Gemfile in order to enable the coolness!!!"

@@ -34,7 +34,9 @@ alias a='atom .'
     set last_status $status
 
     set_color $fish_color_cwd
-    printf '%s' (prompt_pwd)
+#    printf '%s' (prompt_pwd)
+     printf '%s' (pwd)
+
     set_color normal
 
     printf '%s\n-> ' (__fish_git_prompt)

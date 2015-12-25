@@ -1,3 +1,5 @@
+### Adapted from https://gist.github.com/geddski/1280b2a1ca899c704b6f
+
 ##----GIT------
 
 function git_load_aliases_and_functions

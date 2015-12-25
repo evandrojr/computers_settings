@@ -6,15 +6,15 @@ Installs a kit for debugging Ruby 2.x (jazz_fingers), improves Irb output, insta
 
 Run:
 
-  ### INSTALL_EVERTHING.sh
+  INSTALL_EVERTHING.sh
 
 or run the scripts you prefer:
 
-  ### atom_packages_install.sh
+  atom_packages_install.sh
 
-  ### ruby_coolness_install.sh
+  ruby_coolness_install.sh
 
-  ### fish_install.sh
+  fish_install.sh
 
 ## Thanks to:
 

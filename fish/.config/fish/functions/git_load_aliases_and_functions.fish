@@ -1,6 +1,7 @@
 ##----GIT------
 
 function git_load_aliases_and_functions
+	alias g='git'
 	alias gs='clear ;and git status'
 	alias gb='git branch'
 	alias gbranch='git rev-parse --abbrev-ref HEAD' #get current branch name
@@ -34,6 +35,11 @@ end
 #commit
 function gc
   git commit -m "$argv"
+end
+
+#Checkout
+function gk
+  git checkout "$argv"
 end
 
 #cherry-pick

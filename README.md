@@ -1,6 +1,18 @@
 # Computers' settings
 
-Installs a kit for debugging Ruby 2.x (jazz_fingers), improves Irb output, install a better shell (Fish shell), adds aliases for git, sets a cool prompt with git info and my favorite packages for the Atom text editor, the most awesome text editor ever created.  
+Installs a kit for debugging Ruby 2.x (jazz_fingers);
+
+Improves Irb output (jazz_fingers);
+
+Installs a more productive shell (Fish shell);
+
+Adds aliases for git;
+
+Sets a cool prompt with git info;
+
+Installs a script that removes all the binding.pry's in a directory recursively (remove_breakpoints.rb);
+
+Installs my favorite packages for the Atom text editor, the most awesome text editor ever created;
 
 ## Installation:
 

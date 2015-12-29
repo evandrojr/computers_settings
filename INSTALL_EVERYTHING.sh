@@ -25,8 +25,6 @@ run() {
   "$@" || rc=$?
   if [ $rc -ne 0 ]; then
     complain "E: The command \"$@\" failed with status code $status, we cannot proceed."
-    complain "I: If you have no idea of what went wrong, please feel free to ask for help in the Noosfero community. Check the contact information in the project website (http://noosfero.org
-/)."
     exit 1
   fi
 }

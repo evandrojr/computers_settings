@@ -38,6 +38,7 @@ function lazy_aliases
   alias full_relax='add_database_yml; and rm -f Gemfile.lock; and bundle; and rake db:drop; and rake db:create; and rake db:schema:load; and rake db:migrate; and rake test'
   alias add_database_yml='cp ~/bin/rails/config/database.yml ./config/'
   alias add_gemfile_for_debbuging='cp ~/bin/rails/config/database.yml ./config/'
+  alias add_travis='cp ~/bin/rails/.travis.yml ./'
 
   ## Editors
   alias v='vim'

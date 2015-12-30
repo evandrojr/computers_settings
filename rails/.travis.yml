@@ -1,0 +1,52 @@
+notifications:
+  irc:
+    channels:
+      - "chat.freenode.net#noosferogov"
+    template:
+      - "%{repository_slug} %{branch} %{commit} %{commit_subject} - %{result} %{build_url}"
+
+language: ruby
+rvm:
+  - 2.2.3
+
+sudo: false
+addons:
+  apt:
+    packages:
+      - po4a
+      - iso-codes
+      - tango-icon-theme
+      - pidgin-data
+      # for gem extensions
+      - libmagickwand-dev
+      - libpq-dev
+      - libreadline-dev
+      - libsqlite3-dev
+      - libxslt1-dev
+
+# workaround for https://github.com/travis-ci/travis-ci/issues/4536
+before_install:
+  - export GEM_HOME=$PWD/vendor/bundle/ruby/2.2.0
+  - gem install bundler
+cache: bundler
+
+before_script:
+  - mkdir -p tmp/{pids,cache} log
+  - script/noosfero-plugins disableall
+  #- bundle exec rake makemo &>/dev/null
+# database
+  - cp config/database.yml.travis config/database.yml
+  - psql -c 'create database myapp_test;' -U postgres
+  - bundle exec rake db:schema:load &>/dev/null
+  - bundle exec rake db:migrate &>/dev/null
+
+env:
+  - TASK=test:units
+  - TASK=test:functionals
+  - TASK=test:integration
+  - TASK=cucumber LANG=en
+  - TASK=selenium
+  - TASK=test:noosfero_plugins BUNDLE_OPTS=install
+
+script:
+  - bundle exec rake $TASK

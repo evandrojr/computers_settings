@@ -5,6 +5,7 @@ all_files = Dir.glob("**/*").select {|f| !File.directory?(f) and ( f.end_with?("
 files_with_bp = []
 
 all_files.each do |filename|
+  next if filename.include?("features/support/debug.rb")
   begin
     open(filename, 'r') do |f|
       f.each_line do |line|

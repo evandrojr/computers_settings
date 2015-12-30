@@ -26,6 +26,7 @@ function git_load_aliases_and_functions
 	alias gst='git stash'
 	alias gsta='git stash apply'
 	alias gunstage='git reset HEAD'
+	alias rg='rm Gemfile.lock'
 end
 
 
@@ -38,6 +39,13 @@ end
 function gc
   git commit -m "$argv"
 end
+
+function gcp
+  git commit -m "$argv"
+	git push
+end
+
+
 
 #Checkout
 function gk

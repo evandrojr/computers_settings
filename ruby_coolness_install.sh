@@ -59,6 +59,11 @@ run ln -sv `pwd`/ruby/.pryrc ~/.pryrc
 say "Creating user bin dir if not exists"
 run mkdir -pv ~/bin
 run rm -fv ~/bin/remove_breakpoints.rb
+say "Linking remove_breakpoints.rb"
 run ln -sv `pwd`/ruby/remove_breakpoints.rb ~/bin
+say "Linking rails config dir"
+run rm -fv ~/bin/rails
+run ln -sv `pwd`/rails ~/bin/rails
+
 
 say "Always remember to copy ruby/Gemfile to your config/Gemfile in order to enable the coolness!!!"

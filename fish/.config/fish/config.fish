@@ -1,8 +1,6 @@
 rvm default
 git_load_aliases_and_functions
-
-alias l='ls -la'
-alias a='atom .'
+lazy_aliases
 
 # BEGIN ############## from http://www.martinklepsch.org/posts/git-prompt-for-fish-shell.html
   set normal (set_color normal)

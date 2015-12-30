@@ -7,7 +7,7 @@ notifications:
 
 language: ruby
 rvm:
-  - 2.2.1
+  - 2.2.3
 
 sudo: false
 addons:
@@ -47,7 +47,7 @@ env:
   - TASK=cucumber LANG=en
   - TASK=selenium
   - TASK=test:noosfero_plugins BUNDLE_OPTS=install
-  # Makes life easier than to count every failling test, here summarizes everything
+  # Redundant, but makes life easier instead of counting each failling test, this summarizes everything
   - TASK=test
 
 script:

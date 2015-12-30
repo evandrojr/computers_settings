@@ -47,6 +47,8 @@ env:
   - TASK=cucumber LANG=en
   - TASK=selenium
   - TASK=test:noosfero_plugins BUNDLE_OPTS=install
+  # Makes life easier than to count every failling test, here summarizes everything
+  - TASK=test
 
 script:
   - bundle exec rake $TASK

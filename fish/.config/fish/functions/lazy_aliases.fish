@@ -38,17 +38,16 @@ function lazy_aliases
   alias add_gemfile_for_debbuging='cp ~/bin/rails/config/database.yml ./config/'
   alias add_travis='cp ~/bin/rails/.travis.yml ./'
 
-  alias relax='add_database_yml; and rm -f Gemfile.lock; and bundle; and rake db:migrate; and rake test'
-  alias full_relax='add_database_yml; and rm -f Gemfile.lock; and bundle; and rake db:drop; and rake db:create; and rake db:schema:load; and rake db:migrate; and rake test'
+  alias relax_db_reset='add_database_yml; and rm -f Gemfile.lock; and bundle; and rake db:drop; and rake db:create; and rake db:schema:load; and rake db:migrate'
+  alias relax_test='add_database_yml; and rm -f Gemfile.lock; and bundle; and rake db:migrate; and rake test'
+  alias relax_full='add_database_yml; and rm -f Gemfile.lock; and bundle; and rake db:drop; and rake db:create; and rake db:schema:load; and rake db:migrate; and rake test'
 
   ## Editors
   alias v='vim'
   alias t='atom .'
 
   ## Noosfero specifics
-  alias n='cd ~/p/noosfero'
-
-
+  alias n='cd ~/p/softwarepublico-noosferogov'
 
   ## Swap /etc/hosts
   alias tp='sudo cp /etc/hosts_prod /etc/hosts'

@@ -14,5 +14,6 @@ apm install ruby-test
 apm install execute-as-ruby
 apm install editorconfig
 apm install file-watcher
-apm install saveallthetime
-
+# Cool but too dangereous :( because of this atom Bug
+# https://github.com/lwblackledge/file-watcher/issues/4
+#apm install saveallthetime

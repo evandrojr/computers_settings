@@ -1,3 +1,7 @@
 group :development, :test do
   gem 'jazz_fingers'
 end
+
+group :development do
+  gem 'web-console', '~> 3.0'
+end

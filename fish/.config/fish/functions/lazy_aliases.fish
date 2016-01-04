@@ -35,7 +35,7 @@ function lazy_aliases
 
   ## Super nice!
   alias add_database_yml='cp ~/bin/rails/config/database.yml ./config/'
-  alias add_gemfile_for_debbuging='cp ~/bin/rails/config/database.yml ./config/'
+  alias add_gemfile_for_debbuging='cp ~/bin/rails/config/Gemfile ./config/'
   alias add_travis='cp ~/bin/rails/.travis.yml ./'
 
   alias relax_db_reset='add_database_yml; and rm -f Gemfile.lock; and bundle; and rake db:drop; and rake db:create; and rake db:schema:load; and rake db:migrate'

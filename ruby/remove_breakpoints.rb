@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 require 'fileutils'
 
-all_files = Dir.glob("**/*").select {|f| !File.directory?(f) and ( f.end_with?(".rb")  or f.end_with?(".erb") )  }
+all_files = Dir.glob('**/*').select { |f| !File.directory?(f) && (f.end_with?('.rb') || f.end_with?('.erb')) }
 files_with_bp = []
 
 all_files.each do |filename|
-  next if filename.include?("features/support/debug.rb")
+  next if filename.include?('features/support/debug.rb')
   begin
     open(filename, 'r') do |f|
       f.each_line do |line|
@@ -13,14 +13,14 @@ all_files.each do |filename|
           files_with_bp << filename
           break
         end
-    end
       end
+    end
   rescue => error
     puts("#{error.class} and #{error.message}")
   end
 end
 
-puts "Files with breakpoint"
+puts 'Files with breakpoint'
 puts files_with_bp.inspect
 
 files_with_bp.each do |filename|
@@ -31,7 +31,7 @@ files_with_bp.each do |filename|
     open("#{filename}.rb_tmp", 'w') do |f2|
       f.each_line do |line|
         begin
-         f2.write(line) unless /.*binding\.pry.*/ =~ line
+          f2.write(line) unless /.*binding\.pry.*/ =~ line
         rescue
           problem_writing_file = true
           break
@@ -39,9 +39,8 @@ files_with_bp.each do |filename|
       end
     end
   end
-  unless problem_writing_file
-    s = File.stat(filename)
-    FileUtils.mv "#{filename}.rb_tmp", filename
-    File.chmod(s.mode, filename)   #=> 1
-  end
+  next if problem_writing_file
+  s = File.stat(filename)
+  FileUtils.mv "#{filename}.rb_tmp", filename
+  File.chmod(s.mode, filename)
 end

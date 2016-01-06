@@ -1,7 +1,7 @@
 notifications:
   irc:
     channels:
-      - "chat.freenode.net#noosferogov"
+      - "chat.freenode.net#noosfero-serpro"
     template:
       - "%{repository_slug} %{branch} %{commit} %{commit_subject} - %{result} %{build_url}"
 
@@ -26,6 +26,7 @@ addons:
 
 # workaround for https://github.com/travis-ci/travis-ci/issues/4536
 before_install:
+  - rm Gemfile.lock
   - export GEM_HOME=$PWD/vendor/bundle/ruby/2.2.0
   - gem install bundler
 cache: bundler

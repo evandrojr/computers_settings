@@ -4,7 +4,7 @@ function lazy_aliases
   alias a="remove_breakpoints.rb ; and git add "
   alias b='git branch'
   alias ba='git branch -a'
-  alias bi='bundle install'
+  alias bi='bundle install --jobs=8 --retry=3'
   alias c="remove_breakpoints.rb ; and git commit"
   alias d='git diff'
   alias gf='git fetch'
@@ -40,7 +40,8 @@ function lazy_aliases
 
   alias relax_db_reset='add_database_yml; and rm -f Gemfile.lock; and bundle; and rake db:drop; and rake db:create; and rake db:schema:load; and rake db:migrate'
   alias relax_test='add_database_yml; and rm -f Gemfile.lock; and bundle; and rake db:migrate; and rake test'
-  alias relax_full='add_database_yml; and rm -f Gemfile.lock; and bundle; and rake db:drop; and rake db:create; and rake db:schema:load; and rake db:migrate; and rake test'
+  alias relax_full='add_database_yml; and rm -f Gemfile.lock; bundle;bundle exec spring binstub --all; rake db:drop; and rake db:create; and rake db:schema:load; and rake db:migrate; and rake test'
+  alias spring='bundle;bundle exec spring binstub --all'
 
   ## Editors
   alias v='vim'
@@ -48,6 +49,7 @@ function lazy_aliases
 
   ## Noosfero specifics
   alias n='cd ~/p/softwarepublico-noosferogov'
+  alias bt='rm -f Gemfile.lock; rm -f config/Gemfile; bundle install; cp ~/bin/rails/config/Gemfile ./config/; git add Gemfile.lock'
 
   ## Swap /etc/hosts
   alias tp='sudo cp /etc/hosts_prod /etc/hosts'

@@ -1,5 +1,6 @@
 group :development, :test do
   gem 'jazz_fingers'
+  gem 'spring'
 end
 
 group :development do

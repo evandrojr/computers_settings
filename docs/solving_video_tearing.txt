@@ -1,0 +1,34 @@
+
+from: https://sn0v.wordpress.com/2013/12/17/solve-video-tearing-on-intel-ubuntu-xfce-4/
+
+Solve video tearing on Intel + Ubuntu (XFCE 4)
+Posted on December 17, 2013 by Utkarsh Jaiswal
+For the Unity and GNOME Shell version, check this out.
+
+Having tried out a bunch of DE’s in the past, I find myself moving towards minimalism and speed, and IMO nothing is better suited than XFCE to fulfill those requirements. But just when I thought everything was fine and dandy on my shiny new Xubuntu 13.10 install, video tearing reared its ugly head again. Compositing and tear-free playback just don’t play nice, but Docky (yeah I don’t like the default XFCE panels) requires compositing for all its fancy effects! There is a workaround for this though, and it’s easier than you might think, at least on Intel chipsets. I’ve tested the following fix on an HP laptop running an i5-3210M (with the HD 4000) and 8 gigs of RAM, and used VLC for playback. Before we move any further, let’s get this out of the way – this fix isn’t guaranteed to work, and there’s always a small chance that you might end up breaking your install. If you’re fine with that, read on!
+
+STEP I – Editing VLC’s video output
+
+To make sure our video playback is tear-free, we’ll need to edit VLC’s preferences (Tools > Preferences > Video) and change the Output from its default value to “OpenGL GLX video output (XCB)”. Optionally, you can also check “Accelerated video output (Overlay)”.
+
+STEP II – Forcing VSync in Intel’s settings
+
+To the best of my knowledge, Intel doesn’t have a GUI for its graphical settings, something along the lines of nvidia-settings. But who doesn’t like messing around with Xorg on the command line? Open up a terminal window with root privileges, and create the following file –
+
+/etc/X11/xorg.conf.d/20-intel.conf
+
+Create the requisite folders if they don’t exist. Enter the following in the newly created file and save it –
+Section "Device"
+
+Identifier "Intel Graphics"
+Driver     "intel"
+Option     "AccelMethod"    "sna"
+Option     "TearFree"       "true"
+
+EndSection
+
+The SNA (SandyBridge’s New Acceleration) method is the (faster but more unstable) successor to the UXA (Unified Acceleration Architecture) backend, while the TearFree option fixes video tearing occasionally caused by SNA. In case you’re experiencing freezes/crashes, revert to UXA by setting the value of AccelMethod to uxa instead of sna.
+
+Reboot for the settings to take effect, and you should be good to go. Movie library backlog, here I come!
+
+Credit for this thread goes to the fine folks who maintain the Arch Wiki. The specific sections used can be found here.

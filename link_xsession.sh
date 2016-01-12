@@ -47,8 +47,8 @@ if [ -f computer_settings_dir ]
   else
     complain "computer_settings_dir NOT exists you are in the wrong directory, go to the project directory"
     exit 1
-fi
 
+fi
 say "Linking .xsession"
 run rm -fv ~/.xsession
 run ln -sv `pwd`/x/.xsession ~/.xsession

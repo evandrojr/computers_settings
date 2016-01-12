@@ -1,19 +1,19 @@
 #!/bin/sh
 
 #apm install language-ruby
-apm install ruby-test-switcher
-apm install tabs-to-spaces
-apm install atom-ctags
-#apm install autocomplete-plus
-apm install ruby-block
-apm install atom-rails
-apm install file-icons
-apm install git-plus
-apm install remote-edit
-apm install ruby-test
-apm install execute-as-ruby
-apm install editorconfig
-apm install file-watcher
+apm install ruby-test-switcher || true
+apm install tabs-to-spaces || true
+apm install atom-ctags || true
+#apm install autocomplete-plus || true
+apm install ruby-block || true
+apm install atom-rails  || true
+apm install file-icons || true
+apm install git-plus || true
+apm install remote-edit || true
+apm install ruby-test || true
+apm install execute-as-ruby || true
+apm install editorconfig || true
+apm install file-watcher || true
 # Cool but too dangereous :( because of this atom Bug
 # https://github.com/lwblackledge/file-watcher/issues/4
-#apm install saveallthetime
+#apm install saveallthetime || true

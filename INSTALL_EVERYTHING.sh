@@ -43,5 +43,6 @@ fi
 
 run ./fish_install.sh || true
 run ./ruby_coolness_install.sh || true
+run ./xflux_install.rb || true
 run ./link_xsession.sh || true
 run ./atom_packages_install.sh || true

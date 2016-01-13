@@ -1,5 +1,9 @@
 #!/bin/sh
 
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt-get update
+sudo apt-get install atom
+
 #apm install language-ruby
 apm install ruby-test-switcher || true
 apm install tabs-to-spaces || true

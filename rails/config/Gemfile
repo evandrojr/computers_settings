@@ -1,8 +1,0 @@
-group :development, :test do
-  gem 'jazz_fingers'
-  gem 'spring'
-end
-
-group :development do
-  gem 'web-console', '~> 2.0'
-end

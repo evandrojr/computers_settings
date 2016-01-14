@@ -61,9 +61,9 @@ run mkdir -pv ~/bin
 run rm -fv ~/bin/remove_breakpoints.rb
 say "Linking remove_breakpoints.rb"
 run ln -sv `pwd`/ruby/remove_breakpoints.rb ~/bin
-say "Linking rails config dir"
-run rm -fv ~/bin/rails
-run ln -sv `pwd`/rails ~/bin/rails
+say "Linking noosfero config dir"
+run rm -fv ~/bin/noosfero
+run ln -sv `pwd`/noosfero ~/bin/noosfero
 
 
 say "Always remember to copy ruby/Gemfile to your config/Gemfile in order to enable the coolness!!!"

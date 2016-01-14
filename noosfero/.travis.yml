@@ -26,7 +26,7 @@ addons:
 
 # workaround for https://github.com/travis-ci/travis-ci/issues/4536
 before_install:
-  - rm Gemfile.lock
+  - rm -f Gemfile.lock
   - export GEM_HOME=$PWD/vendor/bundle/ruby/2.2.0
   - gem install bundler
 cache: bundler
@@ -49,7 +49,7 @@ env:
   - TASK=selenium
   - TASK=test:noosfero_plugins BUNDLE_OPTS=install
   # Redundant, but makes life easier instead of counting each failling test, this summarizes everything
-  - TASK=test
+  - TASK=rake test:all:db
 
 script:
   - bundle exec rake $TASK

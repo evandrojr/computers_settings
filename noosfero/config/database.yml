@@ -1,3 +1,10 @@
+<%
+  # http://mislav.uniqpath.com/rails/branching-the-database-along-with-your-code/
+  app = "noosfero"
+  branch = `git symbolic-ref HEAD 2>/dev/null`.chomp.sub('refs/heads/', '')
+  user = (`whoami`).gsub(/\W/, '')
+#  suffix = `git config --bool branch.#{branch}.database`.chomp == 'true' ? "_#{branch}" : ""
+%>
 # PostgreSQL. Versions 7.4 and 8.x are supported.
 #
 # Install the ruby-postgres driver:
@@ -11,24 +18,17 @@
 development:
   adapter: postgresql
   encoding: unicode
-#  database: recaptcha
-#  database: serpro_captcha_plugin
-#  database: production
-  database: master
-#  database: staging
-#  database: noosfero_development
-#  database: dialoga
-#  database: noosfero_api
+  database: <%= "#{app}_#{branch}_development" %>
   template: template0
-  username: 93274300500
+  username: <%= user %>
   password:
   schema_search_path: "dialoga,public"
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
-  host: 127.0.0.1
-  #port: 5432
+  #  host: 127.0.0.1
+  #  port: 5432
 
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public
@@ -43,34 +43,34 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 
-dialoga:
+# dialoga:
+#   adapter: postgresql
+#   port: 5432
+#   database: hom
+#   encoding: unicode
+#   schema_search_path: dialoga
+#   username: <%= user %>
+#   password:
+#   domains:
+#     - hom.dialoga.gov.br
+#     - hom.login.dialoga.gov.br
+#     - hom.gestao.dialoga.gov.br
+
+production:
   adapter: postgresql
-  port: 5432
-  database: hom
   encoding: unicode
-  schema_search_path: dialoga
-  username: 93274300500
+  database: <%= "#{app}_#{branch}_production" %>
+  template: template0
+  username: <%= user %>
   password:
-  domains:
-    - hom.dialoga.gov.br
-    - hom.login.dialoga.gov.br
-    - hom.gestao.dialoga.gov.br
 
 
 test: &TEST
   adapter: postgresql
   encoding: unicode
-  database: noosfero_community_test
+  database: <%= "#{app}_#{branch}_test" %>
   template: template0
-  username: 93274300500
-  password:
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: noosfero_production
-  template: template0
-  username: 93274300500
+  username: <%= user %>
   password:
 
 cucumber:

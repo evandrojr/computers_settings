@@ -7,6 +7,7 @@ function lazy_aliases
   alias bi='bundle install --jobs=8 --retry=3'
   alias c="remove_breakpoints.rb ; and git commit"
   alias d='git diff'
+  alias f='git fetch'
   alias gf='git fetch'
   alias k='git checkout'
   alias kp='git checkout production'
@@ -22,21 +23,20 @@ function lazy_aliases
   alias gs='git stash'
 
   ## Ruby specifics
-  alias rg='rm Gemfile.lock'
+  alias rg='rm -f Gemfile.lock'
 
   ## Rails specifics
   alias rs='rails s'
   alias rc='rails c'
   alias rdm='rails db:migrate'
-  alias x='rake db:migrate ; and script/development'
-  alias z='rake db:migrate ; and rails s'
-  alias rt='ruby -I.:lib:test'
+  alias x='rake db:migrate; and script/development'
+  alias z='rake db:migrate; and rails s'
   alias rt='ruby -I.:lib:test'
 
   ## Super nice!
-  alias add_database_yml='cp ~/bin/rails/config/database.yml ./config/'
-  alias add_gemfile_for_debbuging='cp ~/bin/rails/config/Gemfile ./config/'
-  alias add_travis='cp ~/bin/rails/.travis.yml ./'
+  alias add_database_yml='cp ~/bin/noosfero/config/database.yml ./config/'
+  alias add_gemfile_for_debbuging='cp ~/bin/noosfero/config/Gemfile ./config/'
+  alias add_travis='cp ~/bin/noosfero/.travis.yml ./'
 
   alias relax_db_reset='add_database_yml; and rm -f Gemfile.lock; and bundle; and rake db:drop; and rake db:create; and rake db:schema:load; and rake db:migrate'
   alias relax_test='add_database_yml; and rm -f Gemfile.lock; and bundle; and rake db:migrate; and rake test'

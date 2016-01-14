@@ -51,9 +51,20 @@ function lazy_aliases
   alias n='cd ~/p/softwarepublico-noosferogov'
   alias bt='rm -f Gemfile.lock; rm -f config/Gemfile; bundle install; cp ~/bin/rails/config/Gemfile ./config/; git add Gemfile.lock'
 
+  function pd  --description 'Disable a noosfero plugin'
+    command  ./script/noosfero-plugins disable $argv
+  end
+
+  function pe --description 'Enable a noosfero plugin'
+    command  ./script/noosfero-plugins disable $argv
+    command  ./script/noosfero-plugins enable $argv
+  end
+
   ## Swap /etc/hosts
   alias tp='sudo cp /etc/hosts_prod /etc/hosts'
   alias td='sudo cp /etc/hosts_dev /etc/hosts'
 
   # # # function rtm(){ ruby -I.:lib:test $1 -n 'test_should_$2' ; }
+
+
 end

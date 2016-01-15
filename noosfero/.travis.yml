@@ -48,8 +48,8 @@ env:
   - TASK=cucumber LANG=en
   - TASK=selenium
   - TASK=test:noosfero_plugins BUNDLE_OPTS=install
-  # Redundant, but makes life easier instead of counting each failling test, this summarizes everything
-  - TASK=rake test:all:db
 
 script:
+  - ./script/ci
+   Redundant, but makes life easier instead of counting each failling test, this summarizes everything
   - bundle exec rake $TASK

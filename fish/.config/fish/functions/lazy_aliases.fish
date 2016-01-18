@@ -64,6 +64,11 @@ function lazy_aliases
   alias tp='sudo cp /etc/hosts_prod /etc/hosts'
   alias td='sudo cp /etc/hosts_dev /etc/hosts'
 
+
+  # Really lazy aliases
+
+  alias cs='cd ~/p/computers_settings; and atom .'
+
   # # # function rtm(){ ruby -I.:lib:test $1 -n 'test_should_$2' ; }
 
 

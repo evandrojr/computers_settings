@@ -49,21 +49,29 @@ if [ -f computer_settings_dir ]
     exit 1
 fi
 
-gem_install "jazz_fingers"
 say "Linking .irbrc"
 run rm -fv ~/.irbrc
 run ln -sv `pwd`/ruby/.irbrc ~/.irbrc
+
 say "Linking .pryrc"
 run rm -fv ~/.pryrc
 run ln -sv `pwd`/ruby/.pryrc ~/.pryrc
+
 say "Creating user bin dir if not exists"
 run mkdir -pv ~/bin
+
 run rm -fv ~/bin/remove_breakpoints.rb
 say "Linking remove_breakpoints.rb"
 run ln -sv `pwd`/ruby/remove_breakpoints.rb ~/bin
+
+run rm -fv ~/bin/add_noosfero_administrator.rb
+say "Linking add_noosfero_administrator.rb"
+run ln -sv `pwd`/noosfero/add_noosfero_administrator.rb ~/bin
+
 say "Linking noosfero config dir"
 run rm -fv ~/bin/noosfero
 run ln -sv `pwd`/noosfero ~/bin/noosfero
 
+gem_install "jazz_fingers"
 
 say "Always remember to copy ruby/Gemfile to your config/Gemfile in order to enable the coolness!!!"

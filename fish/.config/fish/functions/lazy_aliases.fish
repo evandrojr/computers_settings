@@ -59,7 +59,7 @@ function lazy_aliases
     command  ./script/noosfero-plugins disable $argv
     command  ./script/noosfero-plugins enable $argv
   end
-
+  
   ## Swap /etc/hosts
   alias tp='sudo cp /etc/hosts_prod /etc/hosts'
   alias td='sudo cp /etc/hosts_dev /etc/hosts'

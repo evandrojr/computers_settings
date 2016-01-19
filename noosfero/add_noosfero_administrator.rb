@@ -1,11 +1,14 @@
 #!/usr/bin/env ruby
 
-c = %Q{rails runner 'Environment.default.enable("skip_new_user_email_confirmation")'}
+environment=ARGV[0]
+environment ||= "development"
+
+c = %Q{rails runner -e #{environment} 'Environment.default.enable("skip_new_user_email_confirmation")'}
 puts c
 system c
 
-c = %Q{ rails r " \
-u = 'gostoso';\
+c = %Q{ rails r -e #{environment} " \
+u = 'evandrojr';\
 n = 'e';\
 user = User.create(:login => u, :email => n + '@evandro.org', :password => 'llll', :password_confirmation => 'llll', :environment => Environment.default);\
 user.save!;\

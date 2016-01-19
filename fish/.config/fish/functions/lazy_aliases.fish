@@ -24,6 +24,7 @@ function lazy_aliases
 
   ## Ruby specifics
   alias rg='rm -f Gemfile.lock'
+  alias gem_install='gem install --no-rdoc --no-ri '
 
   ## Rails specifics
   alias rs='rails s'
@@ -40,7 +41,7 @@ function lazy_aliases
 
   alias relax_db_reset='add_database_yml; and rm -f Gemfile.lock; and bundle; and rake db:drop; and rake db:create; and rake db:schema:load; and rake db:migrate'
   alias relax_test='add_database_yml; and rm -f Gemfile.lock; and bundle; and rake db:migrate; and rake test'
-  alias relax_full='add_database_yml; and rm -f Gemfile.lock; bundle;bundle exec spring binstub --all; rake db:drop; and rake db:create; and rake db:schema:load; and rake db:migrate; and rake test'
+  alias relax_full='add_database_yml; and rm -f Gemfile.lock; bi ;bundle exec spring binstub --all; rake db:drop; and rake db:create; and rake db:schema:load; and rake db:migrate; and rake test'
   alias spring='bundle;bundle exec spring binstub --all'
 
   ## Editors
@@ -59,7 +60,7 @@ function lazy_aliases
     command  ./script/noosfero-plugins disable $argv
     command  ./script/noosfero-plugins enable $argv
   end
-  
+
   ## Swap /etc/hosts
   alias tp='sudo cp /etc/hosts_prod /etc/hosts'
   alias td='sudo cp /etc/hosts_dev /etc/hosts'

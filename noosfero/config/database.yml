@@ -15,6 +15,7 @@
 #   gem install ruby-postgres
 #       Choose the win32 build.
 #       Install PostgreSQL and put its /bin directory on your path.
+
 development:
   adapter: postgresql
   encoding: unicode
@@ -65,13 +66,13 @@ development:
 #     - hom.login.dialoga.gov.br
 #     - hom.gestao.dialoga.gov.br
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: <%= "#{app}_#{branch}_production" %>
-  template: template0
-  username: <%= user %>
-  password:
+# production:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: <%= "#{app}_#{branch}_production" %>
+#   template: template0
+#   username: <%= user %>
+#   password:
 
 
 test: &TEST

@@ -22,6 +22,10 @@ function lazy_aliases
   alias s='git status'
   alias gs='git stash'
 
+  ## Editors
+  alias v='vim'
+  alias t='atom .'
+
   ## Ruby specifics
   alias rg='rm -f Gemfile.lock'
   alias gem_install='gem install --no-rdoc --no-ri '
@@ -39,17 +43,13 @@ function lazy_aliases
   alias add_gemfile_for_debbuging='cp ~/bin/noosfero/config/Gemfile ./config/'
   alias add_travis='cp ~/bin/noosfero/.travis.yml ./'
 
-  alias relax_db_reset='add_database_yml; and rm -f Gemfile.lock; and bundle; and rake db:drop; and rake db:create; and rake db:schema:load; and rake db:migrate'
-  alias relax_test='add_database_yml; and rm -f Gemfile.lock; and bundle; and rake db:migrate; and rake test'
+  alias relax_db_reset='add_database_yml; and rm -f Gemfile.lock; bi; and rake db:drop; and rake db:create; and rake db:schema:load; and rake db:migrate'
+  alias relax_test='add_database_yml; and rm -f Gemfile.lock; bi; and rake db:migrate; and rake test'
   alias relax_full='add_database_yml; and rm -f Gemfile.lock; bi ;bundle exec spring binstub --all; rake db:drop; and rake db:create; and rake db:schema:load; and rake db:migrate; and rake test'
-  alias spring='bundle;bundle exec spring binstub --all'
-
-  ## Editors
-  alias v='vim'
-  alias t='atom .'
+  alias spring='bi; bundle exec spring binstub --all'
 
   ## Noosfero specifics
-  alias n='cd ~/p/softwarepublico-noosferogov'
+  alias n='cd ~/p/softwarepublico-noosferogov; and t'
   alias bt='rm -f Gemfile.lock; rm -f config/Gemfile; bundle install; cp ~/bin/rails/config/Gemfile ./config/; git add Gemfile.lock'
 
   function pd  --description 'Disable a noosfero plugin'
@@ -65,12 +65,9 @@ function lazy_aliases
   alias tp='sudo cp /etc/hosts_prod /etc/hosts'
   alias td='sudo cp /etc/hosts_dev /etc/hosts'
 
-
   # Really lazy aliases
-
-  alias cs='cd ~/p/computers_settings; and atom .'
+  alias cs='cd ~/p/computers_settings; and t'
 
   # # # function rtm(){ ruby -I.:lib:test $1 -n 'test_should_$2' ; }
-
 
 end

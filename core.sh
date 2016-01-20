@@ -41,3 +41,9 @@ link() {
   say "Linking $1 to $2"
   run ln -sv $1 $2
 }
+
+link_hard() {
+  run rm -fv $2
+  say "Linking $1 to $2"
+  run ln -v $1 $2
+}

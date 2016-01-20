@@ -1,8 +1,13 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
+SRC=$(cd $(dirname "$0"); pwd)
+source "${SRC}/core.sh"
 
 sudo add-apt-repository ppa:webupd8team/atom
 sudo apt-get update
-sudo apt-get install atom
+sudo apt-get install -y atom 
+
+link $SRC/atom/config.cson ~/.atom/config.cson
 
 #apm install language-ruby
 apm install ruby-test-switcher || true
@@ -18,6 +23,7 @@ apm install ruby-test || true
 apm install execute-as-ruby || true
 apm install editorconfig || true
 apm install file-watcher || true
+
 # Cool but too dangereous :( because of this atom Bug
 # https://github.com/lwblackledge/file-watcher/issues/4
 #apm install saveallthetime || true

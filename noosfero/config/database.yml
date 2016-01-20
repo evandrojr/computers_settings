@@ -24,6 +24,15 @@ development:
   password:
   schema_search_path: "dialoga,public"
 
+dialoga_development:
+  adapter: postgresql
+  port: 5432
+  database: <%= user %>
+  encoding: unicode
+  schema_search_path: dialoga
+  username: <%= user %>
+  password:
+
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.

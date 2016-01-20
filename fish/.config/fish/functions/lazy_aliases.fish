@@ -49,7 +49,7 @@ function lazy_aliases
   alias spring='bi; bundle exec spring binstub --all'
 
   ## Noosfero specifics
-  alias n='cd ~/p/softwarepublico-noosferogov; and t'
+  alias n='cd ~/p/softwarepublico-noosferogov; t'
   alias bt='rm -f Gemfile.lock; rm -f config/Gemfile; bundle install; cp ~/bin/rails/config/Gemfile ./config/; git add Gemfile.lock'
 
   function pd  --description 'Disable a noosfero plugin'

@@ -42,15 +42,17 @@ function lazy_aliases
   alias add_database_yml='cp ~/bin/noosfero/config/database.yml ./config/'
   alias add_gemfile_for_debbuging='cp ~/bin/noosfero/config/Gemfile ./config/'
   alias add_travis='cp ~/bin/noosfero/.travis.yml ./'
-
-  alias relax_db_reset='add_database_yml; and rm -f Gemfile.lock; bi; and rake db:drop; and rake db:create; and rake db:schema:load; and rake db:migrate'
+  alias db_setup='rake db:create; and rake db:schema:load; and rake db:migrate'
+  alias relax_db_reset='add_database_yml; and rg; bi; and rake db:drop; and db_setup; and rake db:data:minimal; and add_noosfero_administrator.rb'
+  alias relax_db_setup='add_database_yml; and db_setup; and rake db:data:minimal; and add_noosfero_administrator.rb'
   alias relax_test='add_database_yml; and rm -f Gemfile.lock; bi; and rake db:migrate; and rake test'
-  alias relax_full='add_database_yml; and rm -f Gemfile.lock; bi ;bundle exec spring binstub --all; rake db:drop; and rake db:create; and rake db:schema:load; and rake db:migrate; and rake test'
+  alias relax='add_database_yml; and rm -f Gemfile.lock; bi and; bundle exec spring binstub --all; rake db:drop; and db_setup; and add_noosfero_administrator.rb'
+  alias relax_full='add_database_yml; and rm -f Gemfile.lock; bi and;bundle exec spring binstub --all; rake db:drop; and db_setup; and rake test'
   alias spring='bi; bundle exec spring binstub --all'
 
   ## Noosfero specifics
   alias n='cd ~/p/softwarepublico-noosferogov; t'
-  
+
   function pd  --description 'Disable a noosfero plugin'
     command  ./script/noosfero-plugins disable $argv
   end

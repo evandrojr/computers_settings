@@ -1,5 +1,4 @@
 #!/bin/sh
-
-rygel || true &
-google-chrome || true &
-xflux -l -13.0 -g -38.5
+rygel & || true
+google-chrome & || true
+xflux -l -13.0 -g -38.5 & || true

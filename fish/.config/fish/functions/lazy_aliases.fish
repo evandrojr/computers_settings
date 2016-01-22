@@ -68,6 +68,7 @@ function lazy_aliases
 
   # Really lazy aliases
   alias cs='cd ~/p/computers_settings; and t'
+  alias lb='cd ~/p/layback; and t'
 
   # # # function rtm(){ ruby -I.:lib:test $1 -n 'test_should_$2' ; }
 

@@ -46,8 +46,8 @@ function lazy_aliases
   alias relax_db_reset='add_database_yml; and rg; bi; and rake db:drop; and db_setup; and rake db:data:minimal; and add_noosfero_administrator.rb'
   alias relax_db_setup='add_database_yml; and db_setup; and rake db:data:minimal; and add_noosfero_administrator.rb'
   alias relax_test='add_database_yml; and rm -f Gemfile.lock; bi; and rake db:migrate; and rake test'
-  alias relax='add_database_yml; and rm -f Gemfile.lock; bi and; bundle exec spring binstub --all; rake db:drop; and db_setup; and add_noosfero_administrator.rb'
-  alias relax_full='add_database_yml; and rm -f Gemfile.lock; bi and;bundle exec spring binstub --all; rake db:drop; and db_setup; and rake test'
+  alias relax='add_database_yml; and rm -f Gemfile.lock; bi; and bundle exec spring binstub --all; rake db:drop; and db_setup; and add_noosfero_administrator.rb'
+  alias relax_full='add_database_yml; and rm -f Gemfile.lock; bi; and bundle exec spring binstub --all; rake db:drop; and db_setup; and rake test'
   alias spring='bi; bundle exec spring binstub --all'
 
   ## Noosfero specifics

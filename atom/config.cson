@@ -11,6 +11,7 @@
   editor:
     invisibles: {}
     showIndentGuide: true
+    fontSize: 13
   "git-plus":
     pullBeforePush: "pull"
     verboseCommit: true

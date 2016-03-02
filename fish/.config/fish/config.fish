@@ -1,3 +1,5 @@
+set -x PATH /usr/local/go/bin $PATH
+set -x GOPATH $HOME/p/go
 rvm default
 git_load_aliases_and_functions
 lazy_aliases

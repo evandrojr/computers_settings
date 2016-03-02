@@ -6,11 +6,10 @@
   core:
     disabledPackages: [
       "symbols-view"
-      "saveallthetime"
+      "riot"
     ]
   editor:
     invisibles: {}
-    fontSize: 17
     showIndentGuide: true
   "git-plus":
     pullBeforePush: "pull"

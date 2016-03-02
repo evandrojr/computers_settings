@@ -45,3 +45,7 @@ lazy_aliases
   end
 
 # END ############## from http://www.martinklepsch.org/posts/git-prompt-for-fish-shell.html
+
+function nvm
+  bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+end

@@ -1,5 +1,7 @@
 ## Git specifics
 # alias a="ag '(#DONT_COMMIT)|(binding.pry)' && git add"
+
+alias f="fish"
 alias a="remove_breakpoints.rb && git add"
 alias b='git branch'
 alias bi='bundle install'

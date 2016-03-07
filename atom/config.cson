@@ -1,20 +1,21 @@
 "*":
-  "exception-reporting":
-    userId: "8cfa1940-8049-1c50-2dab-6944dfc8f4e5"
-  welcome:
-    showOnStartup: false
   core:
     disabledPackages: [
       "symbols-view"
       "riot"
+      "saveallthetime"
     ]
   editor:
+    fontSize: 16
     invisibles: {}
     showIndentGuide: true
-    fontSize: 13
+  "exception-reporting":
+    userId: "8cfa1940-8049-1c50-2dab-6944dfc8f4e5"
+  "file-watcher":
+    promptWhenChange: true
   "git-plus":
     pullBeforePush: "pull"
     verboseCommit: true
-  "file-watcher":
-    promptWhenChange: true
+  welcome:
+    showOnStartup: false
   whitespace: {}

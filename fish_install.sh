@@ -6,8 +6,7 @@ source "${SRC}/core.sh"
 # run sudo apt-get install fish
 # Installs a more recent version
 run sudo dpkg -i $SRC/fish/install/fish_2.2.0-1-trusty_amd64.deb
-
-run chsh -s `which fish`
+run sudo chsh -s `which fish` $USER
 run mkdir -p ~/.config/fish
 run rm ~/.config/fish/config.fish -fv
 run rm ~/.config/fish/functions -rfv

@@ -3,10 +3,9 @@
     disabledPackages: [
       "symbols-view"
       "riot"
-      "saveallthetime"
     ]
   editor:
-    fontSize: 16
+    fontSize: 18
     invisibles: {}
     showIndentGuide: true
   "exception-reporting":
@@ -16,6 +15,8 @@
   "git-plus":
     pullBeforePush: "pull"
     verboseCommit: true
+  minimap:
+    absoluteMode: true
   welcome:
     showOnStartup: false
   whitespace: {}

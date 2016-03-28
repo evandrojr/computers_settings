@@ -6,6 +6,8 @@
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
+
+# bira and abden are nice
 ZSH_THEME="random"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -50,7 +52,7 @@ ZSH_THEME="random"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions rails)
+plugins=(git zsh-autosuggestions)
 
 # User configuration
 
@@ -164,3 +166,5 @@ source $ZSH/oh-my-zsh.sh
 
 export NVM_DIR="/home/j/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"

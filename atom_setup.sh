@@ -7,6 +7,7 @@ sudo add-apt-repository ppa:webupd8team/atom
 sudo apt-get update
 sudo apt-get install -y atom 
 
+mkdir -p ~/.atom/
 link $SRC/atom/config.cson ~/.atom/config.cson
 
 #apm install language-ruby

@@ -125,8 +125,7 @@ source $ZSH/oh-my-zsh.sh
   alias rs='rails s'
   alias rc='rails c'
   alias rdm='rails db:migrate'
-  alias x='rake db:migrate && script/development'
-  alias z='rake db:migrate && rails s'
+  alias x='rake db:migrate && rails s'
   alias rt='ruby -I.:lib:test'
 
   ## Super nice!

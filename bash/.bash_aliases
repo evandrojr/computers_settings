@@ -30,7 +30,7 @@ alias rg='rm Gemfile.lock'
 alias rc='rails c'
 alias rdm='rails db:migrate'
 alias x='rake db:migrate && script/development'
-alias z='rake db:migrate && rails s'
+alias z='zsh'
 alias v='vim'
 alias rt='ruby -I.:lib:test'
 

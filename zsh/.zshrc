@@ -52,7 +52,7 @@ ZSH_THEME="random"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git history-substring-search)
+plugins=(git history-substring-search zsh-syntax-highlighting zsh-autosuggestions)
 
 # User configuration
 
@@ -156,7 +156,7 @@ source $ZSH/oh-my-zsh.sh
   function pha {
     command  git push github-evandrojr-noosfero $argv
     command  git push gitlab-evandrojr-noosfero $argv
-    command  git push origin                    $argv  
+    command  git push origin                    $argv
   }
 
   ## Swap /etc/hosts

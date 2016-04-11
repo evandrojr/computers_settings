@@ -152,6 +152,13 @@ source $ZSH/oh-my-zsh.sh
     command  ./script/noosfero-plugins enable $argv
   }
 
+  # Parameter is the branch
+  function pha {
+    command  git push github-evandrojr-noosfero $argv
+    command  git push gitlab-evandrojr-noosfero $argv
+    command  git push origin                    $argv  
+  }
+
   ## Swap /etc/hosts
   alias tp='sudo cp /etc/hosts_prod /etc/hosts'
   alias td='sudo cp /etc/hosts_dev /etc/hosts'

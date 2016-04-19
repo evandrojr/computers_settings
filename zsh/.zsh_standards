@@ -1,0 +1,12 @@
+# Path to your oh-my-zsh installation.
+source $HOME/.zsh_aliases
+
+# bira and abden are nice
+ZSH_THEME="random"
+
+plugins=(git history-substring-search zsh-syntax-highlighting zsh-autosuggestions)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"

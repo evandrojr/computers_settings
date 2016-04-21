@@ -3,6 +3,7 @@
     disabledPackages: [
       "symbols-view"
       "riot"
+      "saveallthetime"
     ]
   editor:
     invisibles: {}

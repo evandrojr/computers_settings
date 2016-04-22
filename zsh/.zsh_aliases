@@ -64,9 +64,10 @@
 
   # Parameter is the branch
   function pha {
-    command  git push github-evandrojr-noosfero $argv
-    command  git push gitlab-evandrojr-noosfero $argv
-    command  git push origin                    $argv
+    command  git push github-evandrojr-noosfero `git rev-parse --abbrev-ref HEAD` $argv
+    command  git push gitlab-evandrojr-noosfero `git rev-parse --abbrev-ref HEAD` $argv
+    command  git push origin                    `git rev-parse --abbrev-ref HEAD` $argv
+    command  git push gitlab-participa          `git rev-parse --abbrev-ref HEAD` $argv    
   }
 
   ## Swap /etc/hosts

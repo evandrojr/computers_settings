@@ -22,6 +22,8 @@
   alias r='git reset'
   alias s='git status'
   alias gs='git stash'
+  ### returns the current branch only
+  alias -g cb='`git rev-parse --abbrev-ref HEAD`'
 
   ## Editors
   alias v='vim'
@@ -67,7 +69,7 @@
     command  git push github-evandrojr-noosfero `git rev-parse --abbrev-ref HEAD` $argv
     command  git push gitlab-evandrojr-noosfero `git rev-parse --abbrev-ref HEAD` $argv
     command  git push origin                    `git rev-parse --abbrev-ref HEAD` $argv
-    command  git push gitlab-participa          `git rev-parse --abbrev-ref HEAD` $argv    
+    command  git push gitlab-participa          `git rev-parse --abbrev-ref HEAD` $argv
   }
 
   ## Swap /etc/hosts

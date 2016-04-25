@@ -72,6 +72,12 @@
     command  git push gitlab-participa          `git rev-parse --abbrev-ref HEAD` $argv
   }
 
+  function plcm {
+    command  git checkout master
+    command  git pull community master
+    command  git reset --hard community/master
+  }
+
   ## Swap /etc/hosts
   alias tp='sudo cp /etc/hosts_prod /etc/hosts'
   alias td='sudo cp /etc/hosts_dev /etc/hosts'

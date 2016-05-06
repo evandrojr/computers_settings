@@ -1,4 +1,5 @@
 "*":
+  "atom-typescript": {}
   core:
     disabledPackages: [
       "symbols-view"
@@ -6,9 +7,9 @@
       "saveallthetime"
     ]
   editor:
+    fontSize: 16
     invisibles: {}
     showIndentGuide: true
-    fontSize: 18
   "exception-reporting":
     userId: "8cfa1940-8049-1c50-2dab-6944dfc8f4e5"
   "file-watcher":

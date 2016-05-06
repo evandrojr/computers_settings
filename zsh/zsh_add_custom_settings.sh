@@ -1,1 +1,4 @@
-echo 'source $HOME/.zsh_standards' >> .zshrc
+#############################################
+###### Oh my zsh customization ##############
+echo 'source $HOME/.zsh_standards' >> ~/.zshrc
+#############################################

@@ -22,6 +22,8 @@
   alias r='git reset'
   alias s='git status'
   alias gs='git stash'
+  ### returns the current branch only
+  alias -g cb='`git rev-parse --abbrev-ref HEAD`'
 
   ## Editors
   alias v='vim'
@@ -64,9 +66,16 @@
 
   # Parameter is the branch
   function pha {
-    command  git push github-evandrojr-noosfero $argv
-    command  git push gitlab-evandrojr-noosfero $argv
-    command  git push origin                    $argv
+    command  git push github-evandrojr-noosfero `git rev-parse --abbrev-ref HEAD` $argv
+    command  git push gitlab-evandrojr-noosfero `git rev-parse --abbrev-ref HEAD` $argv
+    command  git push origin                    `git rev-parse --abbrev-ref HEAD` $argv
+    command  git push gitlab-participa          `git rev-parse --abbrev-ref HEAD` $argv
+  }
+
+  function plcm {
+    command  git checkout master
+    command  git pull community master
+    command  git reset --hard community/master
   }
 
   ## Swap /etc/hosts

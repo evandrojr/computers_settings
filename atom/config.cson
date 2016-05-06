@@ -8,7 +8,7 @@
   editor:
     invisibles: {}
     showIndentGuide: true
-    fontSize: 15
+    fontSize: 18
   "exception-reporting":
     userId: "8cfa1940-8049-1c50-2dab-6944dfc8f4e5"
   "file-watcher":

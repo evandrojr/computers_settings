@@ -30,7 +30,7 @@
     git commit -m "$*"
     git push
   }
-  
+
   ## Editors
   alias v='vim'
   alias t='atom .'
@@ -58,7 +58,6 @@
   alias relax_full='add_database_yml && rm -f Gemfile.lock; bi && bundle exec spring binstub --all; rake db:drop && db_setup && rake test'
   alias spring='bi; bundle exec spring binstub --all'
 
-
   ## Noosfero specifics
   alias n='cd ~/_/softwarepublico-noosferogov; t'
 
@@ -84,6 +83,11 @@
     command  git pull community master
     command  git reset --hard community/master
   }
+
+  # npm
+  alias ni='npm install'
+  alias ns='npm start'
+  alias nt='npm test'
 
   ## Swap /etc/hosts
   alias tp='sudo cp /etc/hosts_prod /etc/hosts'

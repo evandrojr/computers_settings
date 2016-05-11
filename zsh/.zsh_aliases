@@ -52,6 +52,12 @@
   alias relax_full='add_database_yml && rm -f Gemfile.lock; bi && bundle exec spring binstub --all; rake db:drop && db_setup && rake test'
   alias spring='bi; bundle exec spring binstub --all'
 
+  function acp {
+    git add -A .
+    git commit -m "$*"
+    git push
+  }
+
   ## Noosfero specifics
   alias n='cd ~/_/softwarepublico-noosferogov; t'
 

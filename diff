@@ -1,0 +1,122 @@
+diff --git a/zsh/.zshrc b/zsh/.zshrc
+index 1a146c6..383ab89 100644
+--- a/zsh/.zshrc
++++ b/zsh/.zshrc
+@@ -1,14 +1,12 @@
+ # Path to your oh-my-zsh installation.
+-export ZSH=$HOME/.oh-my-zsh
++  export ZSH=$HOME/.oh-my-zsh
+ 
+ # Set name of the theme to load.
+ # Look in ~/.oh-my-zsh/themes/
+ # Optionally, if you set this to "random", it'll load a random theme each
+ # time that oh-my-zsh is loaded.
+-# ZSH_THEME="robbyrussell"
+-
+-# bira and abden are nice
+-ZSH_THEME="random"
++-# bira and abden are nice
++-ZSH_THEME="random"
+ 
+ # Uncomment the following line to use case-sensitive completion.
+ # CASE_SENSITIVE="true"
+@@ -52,11 +50,11 @@ ZSH_THEME="random"
+ # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+ # Example format: plugins=(rails git textmate ruby lighthouse)
+ # Add wisely, as too many plugins slow down shell startup.
+-plugins=(git history-substring-search)
++plugins=(git)
+ 
+ # User configuration
+ 
+-  export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
++  export PATH="/home/j/.nvm/versions/node/v5.7.1/bin:/home/j/.rvm/gems/ruby-2.2.1/bin:/home/j/.rvm/gems/ruby-2.2.1@global/bin:/home/j/.rvm/rubies/ruby-2.2.1/bin:/home/j/.rvm/bin:/usr/local/go/bin:/home/j/bin:/home/j/.gem/ruby/2.1.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/j/.rvm/bin"
+ # export MANPATH="/usr/local/man:$MANPATH"
+ 
+ source $ZSH/oh-my-zsh.sh
+@@ -85,85 +83,3 @@ source $ZSH/oh-my-zsh.sh
+ # Example aliases
+ # alias zshconfig="mate ~/.zshrc"
+ # alias ohmyzsh="mate ~/.oh-my-zsh"
+-
+-
+-################### Begin Lazy Aliases ########################################
+-
+-
+-  ## Git specifics
+-  # alias a="ag '(#DONT_COMMIT)|(binding.pry)' && git add"
+-  alias a="remove_breakpoints.rb && git add "
+-  alias b='git branch'
+-  alias ba='git branch -a'
+-  alias bi='bundle install --jobs=8 --retry=3'
+-  alias c="remove_breakpoints.rb  && git commit"
+-  alias d='git diff'
+-  alias f='git fetch'
+-  alias gf='git fetch'
+-  alias k='git checkout'
+-  alias kp='git checkout production'
+-  alias km='git checkout master'
+-  alias ks='git checkout staging'
+-  alias l='git log'
+-  alias m='git merge'
+-  alias pl='git pull'
+-  alias ph='git push'
+-  alias prs='git pull --recurse-submodules'
+-  alias r='git reset'
+-  alias s='git status'
+-  alias gs='git stash'
+-
+-  ## Editors
+-  alias v='vim'
+-  alias t='atom .'
+-
+-  ## Ruby specifics
+-  alias rg='rm -f Gemfile.lock'
+-  alias gem_install='gem install --no-rdoc --no-ri '
+-
+-  ## Rails specifics
+-  alias rs='rails s'
+-  alias rc='rails c'
+-  alias rdm='rails db:migrate'
+-  alias x='rake db:migrate && rails s'
+-  alias rt='ruby -I.:lib:test'
+-
+-  ## Super nice!
+-  alias add_database_yml='cp ~/bin/noosfero/config/database.yml ./config/'
+-  alias add_gemfile_for_debbuging='cp ~/bin/noosfero/config/Gemfile ./config/'
+-  alias add_travis='cp ~/bin/noosfero/.travis.yml ./'
+-  alias db_setup='rake db:create && rake db:schema:load && rake db:migrate'
+-  alias relax_db_reset='add_database_yml && rg; bi && rake db:drop && db_setup && rake db:data:minimal && add_noosfero_administrator.rb'
+-  alias relax_db_setup='add_database_yml && db_setup && rake db:data:minimal && add_noosfero_administrator.rb'
+-  alias relax_test='add_database_yml && rm -f Gemfile.lock; bi && rake db:migrate && rake test'
+-  alias relax='add_database_yml && rm -f Gemfile.lock; bi && bundle exec spring binstub --all; rake db:drop && db_setup && add_noosfero_administrator.rb'
+-  alias relax_full='add_database_yml && rm -f Gemfile.lock; bi && bundle exec spring binstub --all; rake db:drop && db_setup && rake test'
+-  alias spring='bi; bundle exec spring binstub --all'
+-
+-  ## Noosfero specifics
+-  alias n='cd ~/_/softwarepublico-noosferogov; t'
+-
+-  function pd {
+-    command  ./script/noosfero-plugins disable $argv
+-  }
+-
+-  function pe {
+-    command  ./script/noosfero-plugins disable $argv
+-    command  ./script/noosfero-plugins enable $argv
+-  }
+-
+-  ## Swap /etc/hosts
+-  alias tp='sudo cp /etc/hosts_prod /etc/hosts'
+-  alias td='sudo cp /etc/hosts_dev /etc/hosts'
+-
+-  # Really lazy aliases
+-  alias cs='cd ~/_/computers_settings && t'
+-  alias lb='cd ~/_/layback && t'
+-
+-################### END Lazy Aliases ########################################
+-
+-
+-export NVM_DIR="/home/j/.nvm"
+-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+-export PATH="$HOME/.rbenv/bin:$PATH"
+-eval "$(rbenv init -)"

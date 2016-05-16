@@ -3,6 +3,11 @@
 SRC=$(cd $(dirname "$0"); pwd)
 source "${SRC}/core.sh"
 
+say "Installing oh-my-zsh"
+run sudo apt-get install curl
+
+say "Installing oh-my-zsh"
+run sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 say "Linking .zsh_standards and .zsh_aliases"
 
@@ -12,4 +17,4 @@ say "Creating user bin dir if not exists"
 run mkdir -pv ~/bin
 link $SRC/zsh/zsh_add_custom_settings.sh ~/bin/zsh_add_custom_settings.sh
 say "Updating oh-my-zsh"
-zsh_add_custom_settings.sh
+run zsh_add_custom_settings.sh

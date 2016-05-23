@@ -95,5 +95,6 @@
   # Really lazy aliases
   alias cs='cd ~/_/computers_settings && t'
   alias lb='cd ~/_/layback && t'
+  alias at='cd ~/p/angular-theme && t'
 
 ################### END Lazy Aliases ########################################

@@ -31,6 +31,7 @@ alias rc='rails c'
 alias rdm='rails db:migrate'
 alias x='rake db:migrate && script/development'
 alias z='zsh'
+alias zx='chsh -s $(which zsh) && zsh'
 alias v='vim'
 alias rt='ruby -I.:lib:test'
 

@@ -1,9 +1,6 @@
 # Path to your oh-my-zsh installation.
 source $HOME/.zsh_aliases
 
-# bira and abden are nice
-ZSH_THEME="random"
-
 plugins=(git history-substring-search zsh-syntax-highlighting zsh-autosuggestions rails ruby)
 
 export ANDROID_HOME=~/android_sdk

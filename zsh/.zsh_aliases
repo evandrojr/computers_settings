@@ -58,7 +58,7 @@
   alias spring='bi; bundle exec spring binstub --all'
 
   ## Noosfero specifics
-  alias n='cd ~/_/softwarepublico-noosferogov; t'
+  alias n='cd ~/p/softwarepublico-noosferogov; t'
 
   function pd {
     command  ./script/noosfero-plugins disable $argv

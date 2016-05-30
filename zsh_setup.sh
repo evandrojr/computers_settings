@@ -3,6 +3,12 @@
 SRC=$(cd $(dirname "$0"); pwd)
 source "${SRC}/core.sh"
 
+say "Installing zsh"
+run sudo apt-get install zsh
+
+say "Setting zsh as default"
+run chsh -s $(which zsh)
+
 say "Installing oh-my-zsh"
 run sudo apt-get install curl
 

@@ -1,4 +1,6 @@
 # Path to your oh-my-zsh installation.
+
+ZSH_THEME="murilasso"
 source $HOME/.zsh_aliases
 
 plugins=(git history-substring-search zsh-syntax-highlighting zsh-autosuggestions rails ruby)

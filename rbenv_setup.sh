@@ -14,8 +14,8 @@ run rbenv install $RUBY_VERSION
 run rbenv rehash
 rbenv global $RUBY_VERSION
 gem install bundler
-run git clone -- https://github.com/carsomyr/rbenv-bundler.git  ~/.rbenv/plugins/bundler
-say "Turning on auto bundle exec"
-run rbenv bundler on
+# run git clone -- https://github.com/carsomyr/rbenv-bundler.git  ~/.rbenv/plugins/bundler
+# say "Turning on auto bundle exec"
+# run rbenv bundler on
 run rbenv install -l
 say "Now rbenv install your favourite version"

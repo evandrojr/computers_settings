@@ -26,6 +26,7 @@
   alias -g cb='`git rev-parse --abbrev-ref HEAD`'
 
   ### reset from remote very useful do clean a branch from messy merges
+  ### You must be in the brach to be reset
   ### parameter is the remote to be used
   function rfr {
     git reset --hard $argv/`echo cb`

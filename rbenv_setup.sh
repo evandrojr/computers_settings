@@ -2,7 +2,7 @@
 
 SRC=$(cd $(dirname "$0"); pwd)
 source "${SRC}/core.sh"
-RUBY_VERSION = "2.3.0"
+RUBY_VERSION="2.3.0"
 
 run rm -rf ~/.rbenv
 run git clone https://github.com/rbenv/rbenv.git ~/.rbenv

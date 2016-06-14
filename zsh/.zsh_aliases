@@ -25,6 +25,12 @@
   ### returns the current branch only
   alias -g cb='`git rev-parse --abbrev-ref HEAD`'
 
+  ### reset from remote very useful do clean a branch from messy merges
+  ### parameter is the remote to be used
+  function rfr {
+    git reset --hard $argv/`echo cb`
+  }
+
   function acp {
     git add -A .
     git commit -m "$*"

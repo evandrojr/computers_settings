@@ -20,7 +20,7 @@ link $SRC/zsh/.zsh_standards ~/.zsh_standards
 link $SRC/zsh/.zsh_aliases ~/.zsh_aliases
 say "Creating user bin dir if not exists"
 run mkdir -pv ~/bin
-run rm ~/bin/zsh_add_custom_settings.sh
+run rm -f ~/bin/zsh_add_custom_settings.sh
 link $SRC/zsh/zsh_add_custom_settings.sh ~/bin/zsh_add_custom_settings.sh
 
 say "At the end run zsh_add_custom_settings.sh manually, otherwise no aliases and so!!!"

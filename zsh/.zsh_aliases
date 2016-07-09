@@ -55,7 +55,8 @@
   ## Super nice!
 
   alias -g rake='bundle exec rake'
-  alias -g rails='bundle exec rails'  
+  alias -g rails='bundle exec rails'
+  alias -g cap='bundle exec cap'
   alias add_database_yml='cp ~/bin/noosfero/config/database.yml ./config/'
   alias add_gemfile_for_debbuging='cp ~/bin/noosfero/config/Gemfile ./config/'
   alias add_travis='cp ~/bin/noosfero/.travis.yml ./'

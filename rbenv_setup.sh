@@ -4,6 +4,8 @@ SRC=$(cd $(dirname "$0"); pwd)
 source "${SRC}/core.sh"
 RUBY_VERSION="2.3.0"
 
+run sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev
+
 run rm -rf ~/.rbenv
 run git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 run cd ~/.rbenv && src/configure && make -C src

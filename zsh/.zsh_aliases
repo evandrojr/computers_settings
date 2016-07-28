@@ -25,6 +25,7 @@
   ### returns the current branch only
   alias -g cb='`git rev-parse --abbrev-ref HEAD`'
 
+
   ### reset from remote very useful do clean a branch from messy merges
   ### You must be in the brach to be reset
   ### parameter is the remote to be used
@@ -107,5 +108,7 @@
   alias cs='cd ~/_/computers_settings && t'
   alias lb='cd ~/_/layback && t'
   alias at='cd ~/p/angular-theme && t'
+
+  alias mac='rdesktop -g 1024x768 -u user900849 -p pwd39669 NY083.macincloud.com:6000'
 
 ################### END Lazy Aliases ########################################

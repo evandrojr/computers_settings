@@ -7,7 +7,7 @@
       "saveallthetime"
     ]
   editor:
-    fontSize: 26
+    fontSize: 20
     invisibles: {}
     showIndentGuide: true
   "exception-reporting":

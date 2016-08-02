@@ -48,16 +48,19 @@
   alias gem_install='gem install --no-rdoc --no-ri '
 
   ## Rails specifics
-  alias rs='bundle exec rails s'
-  alias rc='bundle exec rails c'
-  alias rdm='bundle exec rake db:migrate'
+  alias rs='rails s'
+  alias rc='rails c'
+  alias rdm='rake db:migrate'
   alias rt='bundle exec ruby -I.:lib:test'
+  alias -g rake='bundle exec rake'
+  alias -g rails='bundle exec rails'
+  alias -g spring='bundle exec spring'
+
+  ## Capistrano
+  alias -g cap='bundle exec cap'
 
   ## Super nice!
 
-  alias -g rake='bundle exec rake'
-  alias -g rails='bundle exec rails'
-  alias -g cap='bundle exec cap'
   alias add_database_yml='cp ~/bin/noosfero/config/database.yml ./config/'
   alias add_gemfile_for_debbuging='cp ~/bin/noosfero/config/Gemfile ./config/'
   alias add_travis='cp ~/bin/noosfero/.travis.yml ./'
@@ -65,9 +68,9 @@
   alias relax_db_reset='add_database_yml && rg; bi && rake db:drop && db_setup && rake db:data:minimal && add_noosfero_administrator.rb'
   alias relax_db_setup='add_database_yml && db_setup && rake db:data:minimal && add_noosfero_administrator.rb'
   alias relax_test='add_database_yml && rm -f Gemfile.lock; bi && rake db:migrate && rake test'
-  alias relax='add_database_yml && rm -f Gemfile.lock; bi && bundle exec spring binstub --all; rake db:drop && db_setup && add_noosfero_administrator.rb'
-  alias relax_full='add_database_yml && rm -f Gemfile.lock; bi && bundle exec spring binstub --all; rake db:drop && db_setup && rake test'
-  alias spring='bi; bundle exec spring binstub --all'
+  alias relax='add_database_yml && rm -f Gemfile.lock; bi && spring binstub --all; rake db:drop && db_setup && add_noosfero_administrator.rb'
+  alias relax_full='add_database_yml && rm -f Gemfile.lock; bi && spring binstub --all; rake db:drop && db_setup && rake test'
+  alias spring='bi; spring binstub --all'
 
   ## Noosfero specifics
   alias n='cd ~/p/softwarepublico-noosferogov; t'

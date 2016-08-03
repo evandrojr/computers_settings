@@ -1,4 +1,4 @@
 #!/bin/sh
-gnome-terminal & || true
-google-chrome & || true
-xflux -l -13.0 -g -38.5 & || true
+# gnome-terminal & || true
+# google-chrome & || true
+# xflux -l -13.0 -g -38.5 & || true

@@ -5,6 +5,7 @@ source $HOME/.zsh_aliases
 
 plugins=(git history-substring-search zsh-syntax-highlighting zsh-autosuggestions rails ruby)
 
+export JAVA_HOME=~/bin/jdk1.8
 export ANDROID_HOME=~/android_sdk
 PATH=$PATH:$ANDROID_HOME/tools
 PATH=$PATH:$ANDROID_HOME/platform-tools

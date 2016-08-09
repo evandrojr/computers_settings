@@ -6,12 +6,19 @@
     # PreferredAuthentications publickey
 
 Host entreposto
-Hostname 10.30.92.176
-User 93274300500
-IdentityFile ~/.ssh/id_rsa
-IdentitiesOnly yes
-PreferredAuthentications publickey
+  Hostname 10.30.92.176
+  User 93274300500
+  IdentityFile ~/.ssh/id_rsa
+  IdentitiesOnly yes
+  PreferredAuthentications publickey
 
 Host homologacao
-User evandro
-ProxyCommand ssh entreposto nc 189.9.28.253 22
+  User evandro
+  ProxyCommand ssh entreposto nc 189.9.28.253 22
+
+Host java-entreposto-dev
+  User 57a9dcae99ccce0afc000013
+  Hostname mssrv01-des04359.apps.dev.serpro
+  IdentityFile ~/.ssh/ambdes.pem
+  IdentitiesOnly yes
+  PreferredAuthentications publickey

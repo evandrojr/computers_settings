@@ -112,6 +112,4 @@
   alias lb='cd ~/_/layback && t'
   alias at='cd ~/p/angular-theme && t'
 
-  alias mac='rdesktop -g 1024x768 -u user900849 -p pwd39669 NY083.macincloud.com:6000'
-
 ################### END Lazy Aliases ########################################

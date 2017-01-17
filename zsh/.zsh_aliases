@@ -41,7 +41,7 @@
 
   ## Editors
   alias v='vim'
-  alias t='atom .'
+  alias t='code .'
 
   ## Ruby specifics
   alias rg='rm -f Gemfile.lock'

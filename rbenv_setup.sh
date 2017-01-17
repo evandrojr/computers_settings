@@ -2,7 +2,7 @@
 
 SRC=$(cd $(dirname "$0"); pwd)
 source "${SRC}/core.sh"
-RUBY_VERSION="2.3.0"
+RUBY_VERSION="2.4.0"
 
 run sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev
 
